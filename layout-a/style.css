@@ -1,0 +1,29 @@
+* {
+    /* height & width now includes border & padding */
+    box-sizing: border-box;
+  }
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+}
+.a{
+    background-color: aquamarine;
+}
+.b{
+    background-color: rgb(189, 235, 63);
+}
+.c{
+    background-color: rgb(204, 127, 255);
+}
+@media only screen and (min-width: 600px){
+    body{
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr 3fr;
+    }
+    .a{
+        grid-column: span 2;
+    }
+
+}
