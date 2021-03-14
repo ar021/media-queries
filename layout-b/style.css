@@ -1,0 +1,50 @@
+* {
+    /* height & width now includes border & padding */
+    box-sizing: border-box;
+  }
+  
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-areas: 
+        "hdr hdr hdr"
+        "main-cont main-cont main-cont"
+        "sub-cont-c sub-cont-d sub-cont-e"
+        "ftr ftr ftr"; 
+}
+.a{
+    grid-area: hdr;
+    background-color: aqua; 
+}
+.b{
+    grid-area: main-cont;
+    background-color: rgb(0, 255, 0);
+}
+.c{
+    grid-area: sub-cont-c;
+    background-color: rgb(160, 62, 224);
+}
+.d{
+    grid-area: sub-cont-d;
+    background-color: rgb(226, 238, 55);
+}
+.e{
+    grid-area: sub-cont-e;
+    background-color: rgb(228, 53, 67);
+}
+.f{
+    grid-area: ftr;
+    background-color: rgb(135, 87, 248);
+}
+@media only screen and (min-width: 600px) {
+    body {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "hdr hdr hdr hdr"
+            "main-cont main-cont main-cont ftr"
+            "sub-cont-c sub-cont-d sub-cont-e ftr";
+    }
+  }
